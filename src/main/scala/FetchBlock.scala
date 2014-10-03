@@ -1,6 +1,5 @@
 package com.wlangiewicz
 
-import java.net.InetAddress
 import java.util.concurrent.Future
 import org.bitcoinj.core._
 import org.bitcoinj.net.discovery.DnsDiscovery

@@ -1,5 +1,6 @@
 This is a collection of different bitcoinj examples rewritten to scala.
 Most of them are not very interesting or insightful but I did this just as an exercise.
+Some examples work on test network and require running a full node on localhost, others use main Bitcoin network.
 
 ##Examples so far:
 1. DumpWallet
@@ -7,6 +8,8 @@ Most of them are not very interesting or insightful but I did this just as an ex
 3. DoubleSpend
 4. FetchBlockTestNet
 5. FetchBlock
+6. PrintPeers (not complete)
+7. ForwardingService
 
 ##Usage:
 
