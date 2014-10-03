@@ -1,6 +1,11 @@
 This is a collection of different bitcoinj examples rewritten to scala.
+Most of them are not very interesting or insightful but I did this just as an exercise.
 
-Usage:
+##Examples so far:
+1. DumpWallet
+2. BackupToMnemonicSeed
+
+##Usage:
 
 1. clone bitcoinj project and install it locally
 2. At the moment scala examples work with version 0.12-SNAPSHOT - you might need to change that in the future
