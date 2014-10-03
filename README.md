@@ -4,6 +4,9 @@ Most of them are not very interesting or insightful but I did this just as an ex
 ##Examples so far:
 1. DumpWallet
 2. BackupToMnemonicSeed
+3. DoubleSpend
+4. FetchBlockTestNet
+5. FetchBlock
 
 ##Usage:
 
