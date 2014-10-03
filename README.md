@@ -11,6 +11,15 @@ Some examples work on test network and require running a full node on localhost,
 6. PrintPeers (not complete)
 7. ForwardingService
 
+##Logging:
+To disable logging simply comment out this line in `build.sbt`:
+
+```
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
+```
+
+At the moment I'm not sure how to do this more easily configurable.
+
 ##Usage:
 
 1. clone bitcoinj project and install it locally

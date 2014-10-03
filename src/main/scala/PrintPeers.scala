@@ -57,10 +57,11 @@ object PrintPeers extends App {
 
     val bestHeight = Array(1L)
 
-    val futures = new Array[ListenableFuture](3)
+
 
     //TODO translate to scala:
     /*
+    val futures = new Array[ListenableFuture](3)
       val futures : List[ListenableFuture[Void]] = Lists.newArrayList
 
 
