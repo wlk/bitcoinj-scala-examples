@@ -10,6 +10,8 @@ Some examples work on test network and require running a full node on localhost,
 5. FetchBlock
 6. PrintPeers (not complete)
 7. ForwardingService
+8. RestoreFromSeedManual
+9. RestoreFromSeedWalletAppKit
 
 ##Logging:
 To disable logging simply comment out this line in `build.sbt`:
