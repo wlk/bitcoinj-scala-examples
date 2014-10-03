@@ -1,6 +1,6 @@
 organization := "com.wlangiewicz"
 
-name := "dump-wallet"
+name := "bitcoinj-examples-scala"
 
 version := "1.0"
 
