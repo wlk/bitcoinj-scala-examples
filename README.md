@@ -12,8 +12,9 @@ Some examples work on test network and require running a full node on localhost,
 7. ForwardingService
 8. RestoreFromSeedManual
 9. RestoreFromSeedWalletAppKit
-10. Kit
-11. PrivateKeys
+10. KitTestNet
+11. KitMainNet
+12. PrivateKeys
 
 ##Logging:
 To disable logging simply comment out this line in `build.sbt`:
@@ -69,5 +70,26 @@ Key to watch:  xpub68VEFNrNHtueGhybm9Rv7hET4KetvrnPmVnvHoGt3Vr5qeagjbAMRXzc2RtBA
   DeterministicKey{pub=02596f67e6f7e6d86f159c7e69d836a78463dbaa77838ad72db047713dd3ae0540, priv=3616c205121d38bd0b2a1d531af66eb5dda7ba3ce6b62d484a2f115a22746adb, isEncrypted=false}
 
 [success] Total time: 2 s, completed Oct 3, 2014 4:58:15 PM
+```
 
+Sample output from KitTestNet example (1BTC was send using testnet faucet):  
+
+```
+sbt "run-main com.wlangiewicz.KitTestNet"
+[info] Loading project definition from /home/w/dump-wallet/project
+[info] Set current project to bitcoinj-examples-scala (in build file:/home/w/dump-wallet/)
+[info] Compiling 1 Scala source to /home/w/dump-wallet/target/scala-2.11/classes...
+[warn] there was one deprecation warning; re-run with -deprecation for details
+[warn] one warning found
+[info] Running com.wlangiewicz.KitTestNet 
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+send money to: miHmDQv93X2Wz4XBmex4YyC8gzigKFVDVo
+-----> coins resceived: 0bcc1275e9e4f921fc675749c543b13edadf067a7beba44d5ea11c956c408058
+received: 100000000
+-----> confidence changed: 0bcc1275e9e4f921fc675749c543b13edadf067a7beba44d5ea11c956c408058
+new block depth: 0
+-----> confidence changed: 0bcc1275e9e4f921fc675749c543b13edadf067a7beba44d5ea11c956c408058
+new block depth: 0
 ```

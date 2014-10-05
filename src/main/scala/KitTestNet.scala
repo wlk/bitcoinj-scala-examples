@@ -13,9 +13,9 @@ import org.bitcoinj.script.Script
  * In this example we also define a WalletEventListener class with implementors that are called when the wallet changes (for example sending/receiving money)
  *
  * Usage example:
- *    sbt "run-main com.wlangiewicz.Kit"
+ *    sbt "run-main com.wlangiewicz.KitTestNet"
  */
-object Kit extends App {
+object KitTestNet extends App {
   override def main(args: Array[String]): Unit = {
     // First we configure the network we want to use.
     // The available options are:
@@ -26,10 +26,10 @@ object Kit extends App {
     // To test you app with a real network you can use the testnet. The testnet is an alternative bitcoin network that follows the same rules as main network. Coins are worth nothing and you can get coins for example from http://faucet.xeno-genesis.com/
     //
     // For more information have a look at: https://bitcoinj.github.io/testing and https://bitcoin.org/en/developer-examples#testing-applications
-    val params: NetworkParameters = MainNetParams.get
+    val params: NetworkParameters = TestNet3Params.get
     // Now we initialize a new WalletAppKit. The kit handles all the boilerplate for us and is the easiest way to get everything up and running.
     // Have a look at the WalletAppKit documentation and its source to understand what's happening behind the scenes: https://github.com/bitcoinj/bitcoinj/blob/master/core/src/main/java/org/bitcoinj/kits/WalletAppKit.java
-    val kit: WalletAppKit = new WalletAppKit(params, new File("."), "walletappkit-example")
+    val kit: WalletAppKit = new WalletAppKit(params, new File("."), "walletappkit-testnet-example")
     // In case you want to connect with your local bitcoind tell the kit to connect to localhost.
     // You must do that in reg test mode.
     //kit.connectToLocalHost();
@@ -42,7 +42,7 @@ object Kit extends App {
     kit.startAsync
     kit.awaitRunning
     // To observe wallet events (like coins received) we implement a EventListener class that extends the AbstractWalletEventListener bitcoinj then calls the different functions from the EventListener class
-    val wListener: Kit.WalletListener = new Kit.WalletListener
+    val wListener: KitTestNet.WalletListener = new KitTestNet.WalletListener
     kit.wallet.addEventListener(wListener)
     // Ready to run. The kit syncs the blockchain and our wallet event listener gets notified when something happens.
     // To test everything we create and print a fresh receiving address. Send some coins to that address and see if everything works.
