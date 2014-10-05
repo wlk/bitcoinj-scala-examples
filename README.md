@@ -15,6 +15,7 @@ Some examples work on test network and require running a full node on localhost,
 10. KitTestNet
 11. KitMainNet
 12. PrivateKeys
+13. SendRequest
 
 ##Logging:
 To disable logging simply comment out this line in `build.sbt`:
@@ -82,9 +83,6 @@ sbt "run-main com.wlangiewicz.KitTestNet"
 [warn] there was one deprecation warning; re-run with -deprecation for details
 [warn] one warning found
 [info] Running com.wlangiewicz.KitTestNet 
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
 send money to: miHmDQv93X2Wz4XBmex4YyC8gzigKFVDVo
 -----> coins resceived: 0bcc1275e9e4f921fc675749c543b13edadf067a7beba44d5ea11c956c408058
 received: 100000000
@@ -92,4 +90,33 @@ received: 100000000
 new block depth: 0
 -----> confidence changed: 0bcc1275e9e4f921fc675749c543b13edadf067a7beba44d5ea11c956c408058
 new block depth: 0
+```
+
+This is output from running SendRequest (when everything went OK):  
+
+```
+sbt "run-main com.wlangiewicz.SendRequest"
+[info] Loading project definition from /home/w/dump-wallet/project
+[info] Set current project to bitcoinj-examples-scala (in build file:/home/w/dump-wallet/)
+[info] Compiling 1 Scala source to /home/w/dump-wallet/target/scala-2.11/classes...
+[warn] there was one deprecation warning; re-run with -deprecation for details
+[warn] one warning found
+[info] Running com.wlangiewicz.SendRequest 
+Send money to: muuwSEgE4nh375c9x29bXfThUCtvAHLAsw
+coins sent. transaction hash: ad5e8ae0721565efd282d6630f5ffe9ff37bee068474368411e9e3032b865c11
+```
+
+This is output from running SendRequest (when everything we don't have enough founds):  
+
+```
+sbt "run-main com.wlangiewicz.SendRequest"
+[info] Loading project definition from /home/w/dump-wallet/project
+[info] Set current project to bitcoinj-examples-scala (in build file:/home/w/dump-wallet/)
+[info] Compiling 1 Scala source to /home/w/dump-wallet/target/scala-2.11/classes...
+[warn] there was one deprecation warning; re-run with -deprecation for details
+[warn] one warning found
+[info] Running com.wlangiewicz.SendRequest 
+Send money to: msEDq1aybTVp3ZZby7kC9RbGBvXji6R7Qu
+Not enough coins in your wallet. Missing 9010000 satoshis are missing (including fees)
+Send money to: msEDq1aybTVp3ZZby7kC9RbGBvXji6R7Qu
 ```
