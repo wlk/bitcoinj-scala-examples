@@ -28,9 +28,8 @@ At the moment I'm not sure how to do this more easily configurable.
 
 ##Usage:
 
-1. clone bitcoinj project and install it locally
-2. At the moment scala examples work with version 0.12-SNAPSHOT - you might need to change that in the future
-3. This is how you run examples:  
+1. At the moment scala examples work with bitcoinj version 0.12 - you might need to change that in the future
+2. This is how you run examples:  
 ```
 sbt "run-main package.name.class.name parameters"
 ```  
@@ -39,7 +38,7 @@ for example:
 sbt "run-main com.wlangiewicz.DumpWallet /home/w/bitcoinj/examples/forwarding-service.wallet"
 ```  
 
-4. This is example output from DumpWallet example:  
+3. This is example output from DumpWallet example:  
 
 ```
 w@virtualbox ~/dump-wallet (master) $ sbt "run-main com.wlangiewicz.DumpWallet /home/w/bitcoinj/examples/forwarding-service.wallet"
