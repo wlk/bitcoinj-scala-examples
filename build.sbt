@@ -18,4 +18,4 @@ libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.7"
 
 libraryDependencies += "org.slf4j" % "log4j-over-slf4j" % "1.7.7"  // for any java classes looking for this
 
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"
+//libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.1.2"

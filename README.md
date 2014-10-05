@@ -12,6 +12,8 @@ Some examples work on test network and require running a full node on localhost,
 7. ForwardingService
 8. RestoreFromSeedManual
 9. RestoreFromSeedWalletAppKit
+10. Kit
+11. PrivateKeys
 
 ##Logging:
 To disable logging simply comment out this line in `build.sbt`:
