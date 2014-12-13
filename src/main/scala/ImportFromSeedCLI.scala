@@ -24,16 +24,9 @@ object ImportFromSeedCLI extends App {
 
     val wallet = Wallet.fromSeed(params, seed)
 
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
-    wallet.freshReceiveAddress()
+    for( i <- 1 to 100){
+      wallet.freshReceiveAddress()
+    }
 
 
     Console.println(wallet.toString(true, false, false, null))
