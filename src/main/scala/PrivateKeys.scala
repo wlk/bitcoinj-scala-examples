@@ -62,7 +62,7 @@ object PrivateKeys extends App {
     val peerGroup: PeerGroup = new PeerGroup(params, chain)
     peerGroup.addPeerDiscovery(new DnsDiscovery(params))
     peerGroup.startAsync
-    peerGroup.downloadBlockChain
+    peerGroup.downloadBlockChain()
     peerGroup.stopAsync
 
     // And take them!

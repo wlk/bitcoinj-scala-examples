@@ -50,21 +50,21 @@ object RestoreFromSeedManual extends App {
     chain.addWallet(wallet)
     peers.addWallet(wallet)
     val blockChainListener: DownloadListener = new DownloadListener {
-      override def doneDownload {
+      override def doneDownload() {
         Console.println("blockchain downloaded")
       }
     }
 
     // Now we re-download the blockchain. This replays the chain into the wallet. Once this is completed our wallet should know of all its transactions and print the correct balance.
     peers.startAsync
-    peers.awaitRunning
+    peers.awaitRunning()
     peers.startBlockChainDownload(blockChainListener)
-    blockChainListener.await
+    blockChainListener.await()
 
     // Print a debug message with the details about the wallet. The correct balance should now be displayed.
     Console.println(wallet.toString)
     // shutting down again
     peers.stopAsync
-    peers.awaitTerminated
+    peers.awaitTerminated()
   }
 }
